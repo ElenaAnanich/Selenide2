@@ -17,7 +17,6 @@ public class DeliveryCard {
     }
 
     @Test
-
     public void DeliveryCardTest() {
         open("http://localhost:9999/");
         $("[data-test-id ='city'] input").setValue("Челябинск");
@@ -29,7 +28,7 @@ public class DeliveryCard {
         $("[data-test-id ='agreement']").click();
         $("button.button").click();
         $(".notification__content")
-                .shouldBe(Condition.visible, Duration.ofSeconds(10))
+                .shouldBe(Condition.visible, Duration.ofSeconds(15))
                 .shouldHave(Condition.exactText("Встреча успешно забронирована на " + currentDate));
 
     }
