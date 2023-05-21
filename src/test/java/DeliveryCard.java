@@ -17,6 +17,7 @@ public class DeliveryCard {
     }
 
     @Test
+
     public void DeliveryCardTest() {
         open("http://localhost:9999/");
         $("[data-test-id ='city'] input").setValue("Челябинск");
