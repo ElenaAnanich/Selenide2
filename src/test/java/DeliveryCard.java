@@ -12,7 +12,6 @@ import static com.codeborne.selenide.Selenide.open;
 public class DeliveryCard {
 
     private String generate(int addDays, String pattern) {
-
         return LocalDate.now().plusDays(addDays).format(DateTimeFormatter.ofPattern(pattern));
     }
 
